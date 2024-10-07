@@ -1,0 +1,59 @@
+@use "./colors";
+@use "./dimens";
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: map-get(colors.$colors, primary);
+  color: black;
+  font-weight: 600;
+  border-radius: 14px;
+  padding: 10px 24px;
+  cursor: pointer;
+  // transition for background-color
+  transition: background-color 0.2s;
+
+  border: 2px solid map-get(colors.$colors, primary);
+  width: 100%;
+
+  &.secondary {
+    background-color: map-get(colors.$colors, secondary);
+    color: white;
+  }
+
+  &.outlined {
+    background-color: transparent;
+    color: map-get(colors.$colors, primary);
+  }
+
+  &.sm {
+    padding: 8px 16px;
+    font-size: 14px;
+
+    @media (max-width: map-get(dimens.$breakpoints, sm)) {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  }
+
+  &.md {
+    padding: 10px 24px;
+
+    @media (max-width: map-get(dimens.$breakpoints, sm)) {
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+  }
+
+  &.lg {
+    padding: 12px 32px;
+    font-size: 20px;
+
+    @media (max-width: map-get(dimens.$breakpoints, sm)) {
+      padding: 10px 24px;
+      font-size: 18px;
+      width: 100%;
+    }
+  }
+}

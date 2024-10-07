@@ -1,0 +1,14 @@
+$colors: (
+  primary: #b9ff66,
+  secondary: #191a23,
+);
+
+@each $color-name, $color-value in $colors {
+  .bg-#{"" + $color-name} {
+    background-color: $color-value !important;
+    border-color: $color-value !important;
+  }
+  .#{"" + $color-name} {
+    color: $color-value !important;
+  }
+}

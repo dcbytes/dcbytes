@@ -1,0 +1,93 @@
+@use "../../../styles/dimens";
+
+.drawer-entry {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  @media (min-width: map-get(dimens.$breakpoints, xl)) {
+    height: 100%;
+  }
+
+  @media (max-width: map-get(dimens.$breakpoints, xl)) {
+    border-bottom: 1px solid rgba(140, 204, 136, 0.45);
+    padding-bottom: 14px;
+  }
+}
+
+.drawer-link-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+  a {
+    width: 100%;
+  }
+
+  @media (min-width: map-get(dimens.$breakpoints, xl)) {
+    gap: 10px;
+  }
+}
+
+.toggle-drawer-section {
+  width: 17px;
+  height: auto;
+  object-fit: contain;
+}
+
+.expand-container {
+  opacity: 0;
+  max-height: 0;
+
+  @media (min-width: map-get(dimens.$breakpoints, xl)) {
+    position: fixed;
+    right: 100px;
+    top: calc(dimens.$navbar-height + dimens.$navbar-top-spacing);
+    border-radius: 14px;
+    border: 1px solid #b2abab;
+  }
+}
+
+.expand-container-visible {
+  visibility: visible;
+  opacity: 1;
+  max-height: 1000px;
+  transition: max-height 0.25s ease-in, opacity 0.25s ease-in,
+    visibility 0.25s ease-in;
+  animation-delay: 0.2s;
+}
+
+.expand-container-hidden {
+  opacity: 0;
+  max-height: 0;
+  transition: max-height 0.15s ease-out, opacity 0.15s ease-out,
+    visibility 0.15s ease-out;
+  user-select: none;
+  visibility: hidden;
+
+  * {
+    pointer-events: none;
+  }
+}
+
+// define the transition effect
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+

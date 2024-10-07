@@ -1,0 +1,13 @@
+$horizontal-padding: 56px;
+$navbar-height: 72px;
+$navbar-top-spacing: 15px;
+
+$breakpoints: (
+  sm: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+div {
+  box-sizing: border-box;
+}
