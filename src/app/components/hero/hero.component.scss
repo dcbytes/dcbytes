@@ -1,0 +1,72 @@
+@use "../../../styles/dimens";
+
+.hero {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+
+  @media (max-width: map-get(dimens.$breakpoints, sm)) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.hero-text-container {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+
+  span {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  a {
+    width: 210px;
+  }
+
+  @media (max-width: map-get(dimens.$breakpoints, sm)) {
+    align-items: center;
+  }
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  // img {
+  //   max-width: 590px;
+  //   max-height: 580px;
+  //   object-fit: contain;
+  //
+  //   @media (max-width: map-get(dimens.$breakpoints, sm)) {
+  //     max-width: 100%;
+  //   }
+  // }
+}
+
+.hero-scroll-icon-container {
+  margin-top: 30px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.hero-scroll-icon {
+  display: flex;
+  width: 56px;
+  justify-content: center;
+}
+

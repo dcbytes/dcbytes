@@ -1,0 +1,32 @@
+@use "../../../styles/dimens";
+
+.info-sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+
+  @media (min-width: map-get(dimens.$breakpoints, sm)) {
+    padding: map-get(dimens.$container-paddings, md);
+  }
+
+  @media (max-width: map-get(dimens.$breakpoints, sm)) {
+    margin-top: 200px;
+    gap: 200px;
+  }
+}
+
+.promo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+  @media (max-width: map-get(dimens.$breakpoints, lg)) {
+    gap: 50px;
+  }
+}
+
+.promo-pills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}

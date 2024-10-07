@@ -8,6 +8,29 @@ $breakpoints: (
   xl: 1200px,
 );
 
+$container-paddings: (
+  md: 50px 56px,
+  sm: 30px 20px,
+);
+
 div {
   box-sizing: border-box;
 }
+
+.container-padding {
+  padding: map-get($container-paddings, md);
+}
+
+@media (max-width: map-get($breakpoints, sm)) {
+  .container-padding {
+    padding: map-get($container-paddings, sm);
+    padding-top: calc($navbar-height + $navbar-top-spacing);
+  }
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
