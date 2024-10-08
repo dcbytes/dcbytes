@@ -1,0 +1,10 @@
+<div [class]="'service-display-container ' + colorClass">
+  <div class="title-and-image-container">
+    <app-label [label]="labelTitle"></app-label>
+    <img [src]="image" [alt]="labelTitle" />
+  </div>
+
+  <div class="learn-more-container">
+    <span>{{ description }}</span>
+  </div>
+</div>

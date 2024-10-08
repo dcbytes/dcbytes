@@ -1,0 +1,40 @@
+@use "../../../styles/colors";
+
+.service-display-container {
+  display: flex;
+  width: 600px;
+  // This is to interact with other boxes
+  flex: 1;
+
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+
+  &.green {
+    background-color: map-get(colors.$colors, primary);
+  }
+
+  &.gray {
+    background-color: #f3f3f3;
+  }
+
+  &.black {
+    background-color: #191a23;
+  }
+}
+
+.title-and-image-container {
+  display: flex;
+
+  justify-content: space-between;
+  flex: 3;
+
+  img {
+    max-width: 210px;
+  }
+}
+
+.learn-more-container {
+  display: flex;
+  flex: 1;
+}

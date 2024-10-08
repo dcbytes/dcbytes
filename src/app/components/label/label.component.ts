@@ -6,9 +6,12 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './label.component.html',
-  styleUrl: './label.component.scss'
+  styleUrl: './label.component.scss',
 })
 export class LabelComponent {
   @Input()
   label: string;
+
+  @Input()
+  colorClass: 'green' | 'white' = 'green';
 }
