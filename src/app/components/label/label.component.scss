@@ -1,0 +1,8 @@
+@use "../../../styles/colors";
+
+.label {
+  background-color: map-get(colors.$colors, primary);
+  color: black;
+  padding: 0 0.4rem;
+  border-radius: 7px;
+}

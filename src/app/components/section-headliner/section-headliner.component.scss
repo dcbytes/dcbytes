@@ -1,0 +1,10 @@
+.section-headliner {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  span {
+    max-width: 580px;
+    text-align: left;
+  }
+}

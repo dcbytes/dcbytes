@@ -32,7 +32,11 @@
   }
 
   a {
-    width: 210px;
+    width: 250px;
+
+    button {
+      font-size: 18px;
+    }
   }
 
   @media (max-width: map-get(dimens.$breakpoints, sm)) {

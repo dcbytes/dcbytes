@@ -1,0 +1,12 @@
+.hero-description-container {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.hero-description {
+  flex-direction: column;
+  max-width: 700px;
+}
+

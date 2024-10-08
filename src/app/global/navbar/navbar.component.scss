@@ -59,3 +59,12 @@ nav {
   }
 }
 
+.navbar-blur-effect-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: dimens.$navbar-height;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+}

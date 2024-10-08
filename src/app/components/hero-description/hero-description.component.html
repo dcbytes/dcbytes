@@ -1,0 +1,8 @@
+<div class="hero-description-container">
+  <div class="hero-description">
+    <h1 *ngIf="titleType === 'h1'">{{ mainTitle }}</h1>
+    <h2 *ngIf="titleType === 'h2'">{{ mainTitle }}</h2>
+    <!-- The description, passed as content to handle bolds and other stuff in parents -->
+    <ng-content></ng-content>
+  </div>
+</div>
