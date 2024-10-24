@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ServicesComponent } from './sections/services/services.component';
 import { HeroDescriptionComponent } from '../../components/hero-description/hero-description.component';
 import { ServiceDisplayerComponent } from "../../components/service-displayer/service-displayer.component";
+import { PromoDescriptionComponent } from "../../components/promo-description/promo-description.component";
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ import { ServiceDisplayerComponent } from "../../components/service-displayer/se
     HeroComponent,
     ServicesComponent,
     HeroDescriptionComponent,
-    ServiceDisplayerComponent
+    ServiceDisplayerComponent,
+    PromoDescriptionComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

@@ -1,10 +1,16 @@
 <div [class]="'service-display-container ' + colorClass">
-  <div class="title-and-image-container">
-    <app-label [label]="labelTitle"></app-label>
-    <img [src]="image" [alt]="labelTitle" />
-  </div>
+  <div class="label-and-description-container">
+    <app-label
+      class="label"
+      [label]="labelTitle"
+      [colorClass]="
+        colorClass === 'green' || colorClass === 'black' ? 'white' : 'green'
+      "
+    ></app-label>
 
-  <div class="learn-more-container">
-    <span>{{ description }}</span>
+    <div class="learn-more-container">
+      <h4>{{ description }}</h4>
+    </div>
   </div>
+  <img [src]="image" [alt]="labelTitle" />
 </div>

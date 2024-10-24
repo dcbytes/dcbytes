@@ -22,10 +22,55 @@
   </app-hero-description>
   <!-- <app-services></app-services> -->
 
-  <app-service-displayer
-    labelTitle="Magazin online"
-    image="shopping.svg"
-    description="Pentru succesul afacerii in mediul online"
-    colorClass="gray"
-  ></app-service-displayer>
+  <div class="service-display-container">
+    <div class="row">
+      <app-service-displayer
+        labelTitle="Magazin online"
+        image="shopping.svg"
+        description="Pentru succesul afacerii in mediul online"
+        colorClass="green"
+      ></app-service-displayer>
+      <app-service-displayer
+        labelTitle="Propriul tău blog"
+        image="blog.svg"
+        description="Pentru a-ți împărtăși pasiunile și cunoștințele"
+        colorClass="gray"
+      ></app-service-displayer>
+    </div>
+    <div class="row">
+      <app-service-displayer
+        labelTitle="Email personalizat"
+        image="email.svg"
+        description="Pentru o comunicare eficientă cu clienții tăi"
+        colorClass="gray"
+      ></app-service-displayer>
+      <app-service-displayer
+        labelTitle="SEO optimizat"
+        image="seo.svg"
+        description="Pentru a fi găsit mai ușor pe Google"
+        colorClass="black"
+      ></app-service-displayer>
+    </div>
+  </div>
+
+  <app-promo-description
+    promoTitle="Să transformăm ideile în realitate"
+    promoDescription="Contactează-ne astăzi pentru a descoperi cum serviciile noastre de dezvoltare web pot ajuta afacerea ta să crească și să prospere online."
+    buttonText="Solicită o ofertă"
+    buttonLink="/contact"
+    promoImage="web-development.svg"
+    promoLottie="web.lottie.json"
+  ></app-promo-description>
+
+  <app-hero-description mainTitle="Costuri Transparente, Rezultate Durabile">
+    <span
+      >La Dcbytes, credem că <span class="bold">transparența</span> și
+      <span class="bold">comunicarea deschisă</span> sunt esențiale pentru
+      succesul unui proiect. Oferim
+      <span class="bold">servicii de calitate</span> la
+      <span class="bold">prețuri competitive</span>, astfel încât să
+      <span class="bold">obții rezultate durabile</span> fără a-ți depăși
+      bugetul.</span
+    >
+  </app-hero-description>
 </div>

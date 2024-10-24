@@ -19,7 +19,8 @@ button {
 
   &.secondary {
     background-color: map-get(colors.$colors, secondary);
-    color: white;
+    color: white !important;
+    border-color: map-get(colors.$colors, secondary);
   }
 
   &.outlined {

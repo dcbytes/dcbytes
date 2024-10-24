@@ -30,3 +30,23 @@
   flex-direction: column;
   gap: 40px;
 }
+
+.service-display-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+  flex-direction: column;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    @media (max-width: map-get(dimens.$breakpoints, sm)) {
+      flex-direction: column;
+    }
+  }
+}
