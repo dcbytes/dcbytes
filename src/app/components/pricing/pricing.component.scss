@@ -1,0 +1,42 @@
+@use "../../../styles/colors";
+@use "../../../styles/dimens";
+
+.pricing-container {
+  width: 100%;
+  height: 500px;
+  padding: 40px 60px;
+  border-radius: 45px;
+  display: flex;
+  background-color: map-get(colors.$colors, secondary);
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pricing-col {
+  display: flex;
+  height: 400px;
+  width: 70%;
+  flex-direction: column;
+  border-right: 3px solid white;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 20px;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.subtle-price-per-month {
+  color: #f3f3f3;
+}
+
+.price-link {
+  color: map-get(colors.$colors, primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

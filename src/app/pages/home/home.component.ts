@@ -5,6 +5,7 @@ import { ServicesComponent } from './sections/services/services.component';
 import { HeroDescriptionComponent } from '../../components/hero-description/hero-description.component';
 import { ServiceDisplayerComponent } from "../../components/service-displayer/service-displayer.component";
 import { PromoDescriptionComponent } from "../../components/promo-description/promo-description.component";
+import { PricingComponent } from "../../components/pricing/pricing.component";
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ import { PromoDescriptionComponent } from "../../components/promo-description/pr
     ServicesComponent,
     HeroDescriptionComponent,
     ServiceDisplayerComponent,
-    PromoDescriptionComponent
+    PromoDescriptionComponent,
+    PricingComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
