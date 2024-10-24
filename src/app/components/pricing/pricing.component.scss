@@ -11,6 +11,12 @@
   color: white;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: map-get(dimens.$breakpoints, sm)) {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+  }
 }
 
 .pricing-col {
@@ -25,8 +31,18 @@
   gap: 40px;
   padding: 40px 20px;
 
+  @media (max-width: map-get(dimens.$breakpoints, sm)) {
+    width: 100%;
+    border-right: none;
+    border-bottom: 3px solid white;
+    border-radius: 3px;
+  }
+
   &:last-child {
     border-right: none;
+    @media (max-width: map-get(dimens.$breakpoints, sm)) {
+      border-bottom: none;
+    }
   }
 }
 
