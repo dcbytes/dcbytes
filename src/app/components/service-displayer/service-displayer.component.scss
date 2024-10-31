@@ -12,18 +12,22 @@
   padding: 60px 40px;
   gap: 20px;
 
-  @media (max-width: map-get(dimens.$breakpoints, sm)) {
-    width: 100%;
+  @media (max-width: map-get(dimens.$breakpoints, xl)) {
+    width: 400px;
     padding: 40px 20px;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
   }
 
+  @media (max-width: map-get(dimens.$breakpoints, lg)) {
+    width: 300px;
+  }
+
   img {
     width: 60%;
 
-    @media (max-width: map-get(dimens.$breakpoints, sm)) {
+    @media (max-width: map-get(dimens.$breakpoints, xl)) {
       max-width: 150px;
       max-height: 150px;
     }
@@ -58,7 +62,7 @@
   width: 210px;
   gap: 50px;
 
-  @media (max-width: map-get(dimens.$breakpoints, sm)) {
+  @media (max-width: map-get(dimens.$breakpoints, xl)) {
     width: 100%;
     align-items: center;
     gap: 10px;
@@ -67,7 +71,7 @@
   .label {
     width: 180px;
 
-    @media (max-width: map-get(dimens.$breakpoints, sm)) {
+    @media (max-width: map-get(dimens.$breakpoints, xl)) {
       width: 100%;
     }
   }

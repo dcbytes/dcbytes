@@ -1,5 +1,13 @@
 @use "../../../styles/dimens";
 
+.main-page {
+  display: flex;
+  max-width: 1200px;
+  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .info-sections-container {
   display: flex;
   flex-direction: column;

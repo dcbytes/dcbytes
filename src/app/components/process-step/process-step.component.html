@@ -1,0 +1,22 @@
+  <div
+    [class]="'playful-shadow process-step ' + openState + '-color'"
+  >
+    <div class="step-title-and-toggle">
+      <div class="step-title">
+        <h1>{{ step }}</h1>
+        <h3>{{ stepTitle }}</h3>
+      </div>
+
+      <img
+        [src]="openState === 'closed' ? 'plus.png' : 'minus.png'"
+        class="toggle-image"
+        alt="Toggle"
+        (click)="handleToggle()"
+      />
+    </div>
+
+    <div [class]="'step-description open-close-drawer ' + openState">
+      <hr />
+      <span>{{ stepDescription }}</span>
+    </div>
+  </div>

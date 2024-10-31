@@ -3,76 +3,101 @@
     mainTitle="Navigăm lumea digitală spre succesul tău"
     subtitle="Fie că ai nevoie de un site de prezentare, un magazin online sau o platformă personalizată, echipa noastră de experți creează soluții web moderne și performante. Te ajutăm să ieși în evidență în lumea digitală și să-ți crești afacerea."
   ></app-hero>
-
-  <app-hero-description
-    mainTitle="Soluții Digitale Complete pentru Afacerea Ta"
-  >
-    <span
-      >Transformă-ți <span class="bold">prezența online</span> cu
-      <span class="bold">site-uri web optimizate</span> și
-      <span class="bold">strategii digitale</span> care îți cresc
-      <span class="bold">vizibilitatea</span> și
-      <span class="bold">eficiența</span>. Dcbytes oferă expertiză în trei
-      domenii esențiale:
-      <span class="bold"
-        >dezvoltare web, optimizare pentru motoarele de căutare (SEO)</span
-      >, și <span class="bold">integrare e-commerce</span> pentru creșterea
-      vânzărilor.</span
+  <div class="main-page">
+    <app-hero-description
+      mainTitle="Soluții Digitale Complete pentru Afacerea Ta"
     >
-  </app-hero-description>
-  <!-- <app-services></app-services> -->
+      <span
+        >Transformă-ți <span class="bold">prezența online</span> cu
+        <span class="bold">site-uri web optimizate</span> și
+        <span class="bold">strategii digitale</span> care îți cresc
+        <span class="bold">vizibilitatea</span> și
+        <span class="bold">eficiența</span>. Dcbytes oferă expertiză în trei
+        domenii esențiale:
+        <span class="bold"
+          >dezvoltare web, optimizare pentru motoarele de căutare (SEO)</span
+        >, și <span class="bold">integrare e-commerce</span> pentru creșterea
+        vânzărilor.</span
+      >
+    </app-hero-description>
+    <!-- <app-services></app-services> -->
 
-  <div class="service-display-container">
-    <div class="row">
-      <app-service-displayer
-        labelTitle="Magazin online"
-        image="shopping.svg"
-        description="Pentru succesul afacerii in mediul online"
-        colorClass="green"
-      ></app-service-displayer>
-      <app-service-displayer
-        labelTitle="Propriul tău blog"
-        image="blog.svg"
-        description="Pentru a-ți împărtăși pasiunile și cunoștințele"
-        colorClass="gray"
-      ></app-service-displayer>
+    <div class="service-display-container">
+      <div class="row">
+        <app-service-displayer
+          labelTitle="Magazin online"
+          image="shopping.svg"
+          description="Pentru succesul afacerii in mediul online"
+          colorClass="green"
+        ></app-service-displayer>
+        <app-service-displayer
+          labelTitle="Propriul tău blog"
+          image="blog.svg"
+          description="Pentru a-ți împărtăși pasiunile și cunoștințele"
+          colorClass="gray"
+        ></app-service-displayer>
+      </div>
+      <div class="row">
+        <app-service-displayer
+          labelTitle="Email personalizat"
+          image="email.svg"
+          description="Pentru o comunicare eficientă cu clienții tăi"
+          colorClass="gray"
+        ></app-service-displayer>
+        <app-service-displayer
+          labelTitle="SEO optimizat"
+          image="seo.svg"
+          description="Pentru a fi găsit mai ușor pe Google"
+          colorClass="black"
+        ></app-service-displayer>
+      </div>
     </div>
-    <div class="row">
-      <app-service-displayer
-        labelTitle="Email personalizat"
-        image="email.svg"
-        description="Pentru o comunicare eficientă cu clienții tăi"
-        colorClass="gray"
-      ></app-service-displayer>
-      <app-service-displayer
-        labelTitle="SEO optimizat"
-        image="seo.svg"
-        description="Pentru a fi găsit mai ușor pe Google"
-        colorClass="black"
-      ></app-service-displayer>
+
+    <div style="margin-top: 20px">
+      <app-promo-description
+        promoTitle="Să transformăm ideile în realitate"
+        promoDescription="Contactează-ne astăzi pentru a descoperi cum serviciile noastre de dezvoltare web pot ajuta afacerea ta să crească și să prospere online."
+        buttonText="Solicită o ofertă"
+        buttonLink="/contact"
+        promoImage="web-development.svg"
+        promoLottie="web.lottie.json"
+      ></app-promo-description>
     </div>
+
+    <app-hero-description mainTitle="Costuri Transparente, Rezultate Durabile">
+      <span
+        >La Dcbytes, credem că <span class="bold">transparența</span> și
+        <span class="bold">comunicarea deschisă</span> sunt esențiale pentru
+        succesul unui proiect. Oferim
+        <span class="bold">servicii de calitate</span> la
+        <span class="bold">prețuri competitive</span>, astfel încât să
+        <span class="bold">obții rezultate durabile</span> fără a-ți depăși
+        bugetul.</span
+      >
+    </app-hero-description>
+
+    <app-pricing></app-pricing>
+
+    <app-hero-description mainTitle="Procesul Nostru de Lucru">
+      <span
+        >De la <span class="bold">concept</span> la
+        <span class="bold">implementare</span>, echipa noastră de
+        <span class="bold">experți</span> lucrează împreună cu tine pentru a
+        <span class="bold">îndeplini obiectivele</span> și a
+        <span class="bold">depăși așteptările</span>. Iată cum ne desfășurăm
+        procesul de lucru:</span
+      >
+    </app-hero-description>
+
+    <app-process-step
+      step="01"
+      stepTitle="Planificare și Consultanță"
+      stepDescription="În prima etapă a proiectului, discutăm împreună obiectivele și cerințele tale pentru a înțelege nevoile afacerii tale. Împreună, stabilim un plan de acțiune și un buget pentru proiect."
+    ></app-process-step>
+    <app-process-step
+      step="02"
+      stepTitle="Design inițial"
+      stepDescription="Creăm un design inițial pentru site-ul tău web, care va fi adaptat pentru a îndeplini obiectivele și cerințele stabilite în prima etapă. Îți oferim posibilitatea de a aduce modificări și ajustări la designul inițial."
+    ></app-process-step>
   </div>
-
-  <app-promo-description
-    promoTitle="Să transformăm ideile în realitate"
-    promoDescription="Contactează-ne astăzi pentru a descoperi cum serviciile noastre de dezvoltare web pot ajuta afacerea ta să crească și să prospere online."
-    buttonText="Solicită o ofertă"
-    buttonLink="/contact"
-    promoImage="web-development.svg"
-    promoLottie="web.lottie.json"
-  ></app-promo-description>
-
-  <app-hero-description mainTitle="Costuri Transparente, Rezultate Durabile">
-    <span
-      >La Dcbytes, credem că <span class="bold">transparența</span> și
-      <span class="bold">comunicarea deschisă</span> sunt esențiale pentru
-      succesul unui proiect. Oferim
-      <span class="bold">servicii de calitate</span> la
-      <span class="bold">prețuri competitive</span>, astfel încât să
-      <span class="bold">obții rezultate durabile</span> fără a-ți depăși
-      bugetul.</span
-    >
-  </app-hero-description>
-
-  <app-pricing></app-pricing>
 </div>

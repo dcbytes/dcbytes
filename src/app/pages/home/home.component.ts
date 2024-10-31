@@ -6,6 +6,7 @@ import { HeroDescriptionComponent } from '../../components/hero-description/hero
 import { ServiceDisplayerComponent } from "../../components/service-displayer/service-displayer.component";
 import { PromoDescriptionComponent } from "../../components/promo-description/promo-description.component";
 import { PricingComponent } from "../../components/pricing/pricing.component";
+import { ProcessStepComponent } from "../../components/process-step/process-step.component";
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,8 @@ import { PricingComponent } from "../../components/pricing/pricing.component";
     HeroDescriptionComponent,
     ServiceDisplayerComponent,
     PromoDescriptionComponent,
-    PricingComponent
+    PricingComponent,
+    ProcessStepComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

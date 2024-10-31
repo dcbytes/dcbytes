@@ -1,0 +1,83 @@
+@use "../../../styles/stylings";
+@use "../../../styles/colors";
+@use "../../../styles/dimens";
+
+.process-step {
+  display: flex;
+  width: 100%;
+  border-radius: 45px;
+  padding: 20px 50px;
+  flex-direction: column;
+
+  @media (max-width: map-get(dimens.$breakpoints, sm)) {
+    width: 100%;
+    padding: 20px 20px;
+  }
+
+  &.closed-color {
+    background-color: #f3f3f3;
+    tranisition: background-color 0.25s ease-in;
+  }
+
+  &.open-color {
+    background-color: map-get(colors.$colors, primary);
+    transition: background-color 0.25s ease-in;
+  }
+}
+
+.open-close-drawer {
+  display: flex;
+  width: 100%;
+
+  &.closed {
+    opacity: 0;
+    user-select: none;
+    max-height: 0;
+    visibility: hidden;
+    transition:
+      max-height 0.15s ease-out,
+      opacity 0.15s ease-out,
+      visibility 0.15s ease-out;
+  }
+
+  &.open {
+    opacity: 1;
+    user-select: auto;
+    visibility: visible;
+    transition:
+      max-height 0.25s ease-in,
+      opacity 0.25s ease-in,
+      visibility 0.25s ease-in;
+    max-height: 1000px;
+  }
+}
+
+.step-title-and-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.step-title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.toggle-image {
+  width: 58px;
+  height: 58px;
+  cursor: pointer;
+}
+
+.step-description {
+  flex-direction: column;
+  border-top: 1px solid black;
+  display: flex;
+  width: 100%;
+
+  span {
+    font-size: 18px;
+  }
+}
