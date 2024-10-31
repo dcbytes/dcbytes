@@ -1,5 +1,11 @@
-<div [class]="'service-display-container ' + colorClass">
-  <div class="label-and-description-container">
+<div
+  [class]="'service-display-container ' + colorClass"
+  [ngClass]="{ 'presentation-website': isPresentationWebsite }"
+>
+  <div
+    class="label-and-description-container"
+    [ngClass]="{ 'presentation-website': isPresentationWebsite }"
+  >
     <app-label
       class="label"
       [label]="labelTitle"
@@ -12,5 +18,10 @@
       <h4>{{ description }}</h4>
     </div>
   </div>
-  <img [src]="image" [alt]="labelTitle" />
+  <img
+    [src]="image"
+    [alt]="labelTitle"
+    [class]="isPresentationWebsite ? 'presentation' : ''"
+    (click)="handlePresentationClick()"
+  />
 </div>

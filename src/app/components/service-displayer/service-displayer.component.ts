@@ -21,4 +21,16 @@ export class ServiceDisplayerComponent {
 
   @Input()
   colorClass: 'green' | 'gray' | 'black' = 'green';
+
+  @Input()
+  isPresentationWebsite: boolean = false;
+
+  @Input()
+  presentationLink: string;
+
+  handlePresentationClick() {
+    if (this.isPresentationWebsite) {
+      window.open(this.presentationLink, '_blank');
+    }
+  }
 }

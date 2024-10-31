@@ -22,14 +22,41 @@
 
   @media (max-width: map-get(dimens.$breakpoints, lg)) {
     width: 300px;
+
+    &.presentation-website {
+      width: 100%;
+    }
   }
 
   img {
     width: 60%;
+    // keep aspect ratio
+    height: auto;
+    object-fit: contain;
+
+    &.presentation {
+      // add a shadow to the image
+      // and some elevation
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
+      border-radius: 10px;
+      // hover effect
+      transition: transform 0.5s;
+      cursor: pointer;
+      width: 55%;
+    }
+
+    &.presentation:hover {
+      transform: scale(1.05);
+    }
 
     @media (max-width: map-get(dimens.$breakpoints, xl)) {
       max-width: 150px;
       max-height: 150px;
+
+      &.presentation {
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
   }
 
@@ -61,6 +88,10 @@
   flex: 1;
   width: 210px;
   gap: 50px;
+
+  &.presentation-website {
+    gap: 30px;
+  }
 
   @media (max-width: map-get(dimens.$breakpoints, xl)) {
     width: 100%;

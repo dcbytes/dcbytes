@@ -99,5 +99,66 @@
       stepTitle="Design inițial"
       stepDescription="Creăm un design inițial pentru site-ul tău web, care va fi adaptat pentru a îndeplini obiectivele și cerințele stabilite în prima etapă. Îți oferim posibilitatea de a aduce modificări și ajustări la designul inițial."
     ></app-process-step>
+
+    <app-process-step
+      step="03"
+      stepTitle="Dezvoltare și Implementare"
+      stepDescription="După ce designul este aprobat, începem procesul de dezvoltare și implementare a site-ului web. Îți oferim posibilitatea de a urmări progresul proiectului și de a aduce modificări pe parcurs."
+    >
+    </app-process-step>
+
+    <app-process-step
+      step="04"
+      stepTitle="Monitorizare și Întreținere"
+      stepDescription="Odată ce site-ul tău web este lansat, începem procesul de monitorizare și întreținere pentru a ne asigura că totul funcționează corect și că site-ul tău web este în siguranță."
+    >
+    </app-process-step>
+  </div>
+
+  <app-hero-description mainTitle="Munca noastră">
+    <span
+      >Iată câteva exemple de proiecte pe care le-am realizat, in intregime sau
+      prin colaborare, pentru clienții noștri. Fiecare proiect a fost creat cu
+      pasiune și dedicare pentru a oferi cele mai bune soluții digitale.</span
+    >
+  </app-hero-description>
+
+  <div class="service-display-container">
+    <div class="row">
+      <app-service-displayer
+        labelTitle="Starphish"
+        image="starphish.png"
+        description="Soluție anti-phishing, implementată pentru a proteja datele sensibile"
+        colorClass="black"
+        [isPresentationWebsite]="true"
+        presentationLink="https://starphish.app"
+      ></app-service-displayer>
+      <app-service-displayer
+        labelTitle="Authenticalls"
+        image="authenticalls.png"
+        description="Soluție KYC folosind recunoaștere facială și OCR. Website și platformă de administrare a utilizatorilor"
+        colorClass="gray"
+        [isPresentationWebsite]="true"
+        presentationLink="https://authenticalls.com/home"
+      ></app-service-displayer>
+    </div>
+    <div class="row">
+      <app-service-displayer
+        labelTitle="SCV Blaj"
+        image="scvblaj.png"
+        description="Site de prezentare, CMS si e-magazin pentru stațiunea de cercetare și dezvoltare pentru viticultură și vinificație Blaj"
+        colorClass="gray"
+        [isPresentationWebsite]="true"
+        presentationLink="https://scvblaj.ro/"
+      ></app-service-displayer>
+      <app-service-displayer
+        labelTitle="Activ Kinetic"
+        image="activkinetic.png"
+        description="Site de prezentare pentru cabinetul de kinetoterapie Activ Kinetic"
+        colorClass="black"
+        [isPresentationWebsite]="true"
+        presentationLink="https://activkinetic.ro/"
+      ></app-service-displayer>
+    </div>
   </div>
 </div>
