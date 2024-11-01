@@ -1,6 +1,8 @@
 $colors: (
   primary: #b9ff66,
   secondary: #191a23,
+  input-inactive: #000,
+  input-active: #82bf39,
 );
 
 @each $color-name, $color-value in $colors {

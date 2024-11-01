@@ -1,7 +1,12 @@
 @use "./colors";
 
-input {
-  border: 1px solid map-get(colors.$colors, input);
+textarea {
+  height: 150px !important;
+  padding: 8px 16px !important;
+}
+
+input, textarea {
+  border: 1px solid map-get(colors.$colors, input-inactive);
   height: 50px;
   border-radius: 6px;
   padding: 0 16px;
@@ -10,14 +15,14 @@ input {
 
   &:focus {
     outline: none;
-    border-color: map-get(colors.$colors, primary);
+    border-color: map-get(colors.$colors, input-active);
   }
 
   &:focus ~ label,
   &:not(:placeholder-shown) ~ label {
     transform: translateY(-32px);
     font-size: 12px;
-    color: map-get(colors.$colors, primary);
+    color: map-get(colors.$colors, input-active);
   }
 }
 

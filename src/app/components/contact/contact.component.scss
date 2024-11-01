@@ -1,0 +1,64 @@
+@use "../../../styles/dimens";
+
+.contact-container {
+  border-radius: 15px;
+  background-color: #f3f3f3;
+  padding: 30px 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: map-get(dimens.$breakpoints, lg)) {
+    padding: 30px;
+    flex-direction: column;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    gap: 30px;
+
+    @media (max-width: map-get(dimens.$breakpoints, lg)) {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .input-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+
+    @media (max-width: map-get(dimens.$breakpoints, lg)) {
+      width: 80%;
+    }
+  }
+
+  input,
+  textarea,
+  button {
+    width: 100%;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .corner-animation {
+    display: flex;
+    flex: 3;
+    justify-content: flex-end;
+
+    img {
+      max-height: 600px;
+      object-fit: contain;
+    }
+
+    @media (max-width: map-get(dimens.$breakpoints, lg)) {
+      display: none;
+    }
+  }
+}
+

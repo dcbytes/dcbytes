@@ -7,6 +7,7 @@ import { ServiceDisplayerComponent } from "../../components/service-displayer/se
 import { PromoDescriptionComponent } from "../../components/promo-description/promo-description.component";
 import { PricingComponent } from "../../components/pricing/pricing.component";
 import { ProcessStepComponent } from "../../components/process-step/process-step.component";
+import { ContactComponent } from "../../components/contact/contact.component";
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,8 @@ import { ProcessStepComponent } from "../../components/process-step/process-step
     ServiceDisplayerComponent,
     PromoDescriptionComponent,
     PricingComponent,
-    ProcessStepComponent
+    ProcessStepComponent,
+    ContactComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

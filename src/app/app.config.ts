@@ -4,8 +4,11 @@ import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
-import player from "lottie-web";
-import { provideLottieOptions } from "ngx-lottie";
+import player from 'lottie-web';
+import { provideLottieOptions } from 'ngx-lottie';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { baseUrlInterceptor } from './shared/interceptors/base-url.interceptor';
+import { provideToastr } from 'ngx-toastr';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,6 +18,8 @@ export const appConfig: ApplicationConfig = {
       routes,
       withInMemoryScrolling({ scrollPositionRestoration: 'top' }),
     ),
+    provideHttpClient(withInterceptors([baseUrlInterceptor])),
+    provideToastr(),
     provideClientHydration(),
     provideLottieOptions({
       player: () => player,
