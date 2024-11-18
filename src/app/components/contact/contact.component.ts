@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
-  type FormGroup,
+  FormGroup,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
 import { ContactFormControls } from './contact.enums';
 import { ContactService } from '../../services/contact.service';
 import { FormErrorMessageComponent } from '../../shared/form-error-message/form-error-message.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -19,12 +20,15 @@ import { FormErrorMessageComponent } from '../../shared/form-error-message/form-
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent implements OnInit {
+  private formUrl =
+    'https://script.google.com/macros/s/AKfycbyUxr_6JhOBvcbiZ3BdWv575u_YA3dcqf3LdRSEikwK-w1AlLxsW0Fgc7lYdL0V1kcvWA/exec';
   contactFormControls = ContactFormControls;
   contactForm!: FormGroup;
 
   formSent = false;
 
   constructor(
+    private readonly http: HttpClient,
     private readonly formBuilder: FormBuilder,
     private readonly toastr: ToastrService,
     private readonly contactService: ContactService,
@@ -51,5 +55,57 @@ export class ContactComponent implements OnInit {
         this.toastr.error('Error sending message');
       },
     });
+  }
+
+  private getFormData(): any {
+    const formData: any = {};
+    const formControls = this.contactForm.controls;
+
+    Object.keys(formControls).forEach((key) => {
+      const control = formControls[key];
+      formData[key] = control.value;
+
+      if (control instanceof FormGroup) {
+        const nestedGroup = this.getFormDataNested(control);
+        formData[key] = nestedGroup;
+      }
+    });
+
+    formData.formDataNameOrder = JSON.stringify(Object.keys(formData));
+    formData.formGoogleSheetName = 'responses'; // Default sheet name
+    formData.formGoogleSendEmail = ''; // Default email value
+
+    return formData;
+  }
+
+  private getFormDataNested(formGroup: FormGroup): any {
+    const nestedData: any = {};
+    const controls = formGroup.controls;
+
+    Object.keys(controls).forEach((key) => {
+      nestedData[key] = controls[key].value;
+    });
+
+    return nestedData;
+  }
+
+  submitForm(): void {
+    if (this.contactForm.valid) {
+      const formattedData = this.getFormData();
+      const headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
+      const body = new URLSearchParams(formattedData).toString();
+
+      this.http.post(this.formUrl, body, { headers }).subscribe({
+        next: () => {
+          this.toastr.success('Message sent successfully');
+          this.contactForm.reset();
+          this.formSent = true;
+        },
+        error: (e) => {
+          console.log(e);
+          this.toastr.error('Error sending message. Please try again later');
+        },
+      });
+    }
   }
 }
