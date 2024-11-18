@@ -21,7 +21,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactComponent implements OnInit {
   private formUrl =
-    'https://script.google.com/macros/s/AKfycbyUxr_6JhOBvcbiZ3BdWv575u_YA3dcqf3LdRSEikwK-w1AlLxsW0Fgc7lYdL0V1kcvWA/exec';
+    'https://script.google.com/macros/s/AKfycbx8Jf9e9xE7zVEQeC6v-2h4lD4suG68wzvP8ubGw8sEB4MIlQUA46hTmrnUgyHwF_eh/exec';
   contactFormControls = ContactFormControls;
   contactForm!: FormGroup;
 
