@@ -57,4 +57,11 @@ button {
       width: 100%;
     }
   }
+
+  &:disabled {
+    background-color: #ccc;
+    color: #666;
+    border-color: #ccc;
+    cursor: not-allowed;
+  }
 }

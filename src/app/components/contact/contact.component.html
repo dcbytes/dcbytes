@@ -40,7 +40,7 @@
       ></app-form-error-message>
     </div>
 
-    <button type="submit" [attr.disabled]="!contactForm.valid || formSent">
+    <button type="submit" [disabled]="!contactForm.valid || formSent">
       Trimite mesaj
     </button>
   </form>
