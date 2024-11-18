@@ -33,7 +33,7 @@ export class ContactComponent implements OnInit {
     private readonly formBuilder: FormBuilder,
     private readonly toastr: ToastrService,
     private readonly contactService: ContactService,
-    private readonly loadingService: LoadingService
+    private readonly loadingService: LoadingService,
   ) {}
 
   ngOnInit(): void {
@@ -100,14 +100,18 @@ export class ContactComponent implements OnInit {
 
       this.http.post(this.formUrl, body, { headers }).subscribe({
         next: () => {
-          this.toastr.success('Message sent successfully');
+          this.toastr.success(
+            'Mesajul a fost trimis cu succes! Te vom contacta in cel mai scurt timp',
+          );
           this.contactForm.reset();
           this.formSent = true;
           this.loadingService.hide();
         },
         error: (e) => {
           console.log(e);
-          this.toastr.error('Error sending message. Please try again later');
+          this.toastr.error(
+            'A intervenit o eroare la trimiterea mesajului. Te rugam sa incerci din nou mai tarziu.',
+          );
           this.loadingService.hide();
         },
       });
