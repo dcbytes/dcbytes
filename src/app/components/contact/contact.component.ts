@@ -11,6 +11,7 @@ import { ContactFormControls } from './contact.enums';
 import { ContactService } from '../../services/contact.service';
 import { FormErrorMessageComponent } from '../../shared/form-error-message/form-error-message.component';
 import { HttpClient } from '@angular/common/http';
+import { LoadingService } from '../../services/loading.service';
 
 @Component({
   selector: 'app-contact',
@@ -32,6 +33,7 @@ export class ContactComponent implements OnInit {
     private readonly formBuilder: FormBuilder,
     private readonly toastr: ToastrService,
     private readonly contactService: ContactService,
+    private readonly loadingService: LoadingService
   ) {}
 
   ngOnInit(): void {
@@ -91,6 +93,7 @@ export class ContactComponent implements OnInit {
 
   submitForm(): void {
     if (this.contactForm.valid) {
+      this.loadingService.show();
       const formattedData = this.getFormData();
       const headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
       const body = new URLSearchParams(formattedData).toString();
@@ -100,10 +103,12 @@ export class ContactComponent implements OnInit {
           this.toastr.success('Message sent successfully');
           this.contactForm.reset();
           this.formSent = true;
+          this.loadingService.hide();
         },
         error: (e) => {
           console.log(e);
           this.toastr.error('Error sending message. Please try again later');
+          this.loadingService.hide();
         },
       });
     }

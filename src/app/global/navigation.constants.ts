@@ -5,27 +5,27 @@ export const Navigation = {
   },
   about: {
     title: 'Despre Noi',
-    href: '/despre-noi',
+    href: 'acasa#despre-noi',
   },
   services: {
     title: 'Servicii',
-    href: '/servicii',
+    href: 'acasa#servicii',
   },
   process: {
     title: 'Proces',
-    href: '/proces',
+    href: 'acasa#proces',
   },
   portfolio: {
     title: 'Portofoliu',
-    href: '/portofoliu',
+    href: 'acasa#portofoliu',
   },
   pricing: {
     title: 'Prețuri',
-    href: '/preturi',
+    href: 'acasa#preturi',
   },
   contact: {
     title: 'Solicită o ofertă',
-    href: '/contact',
+    href: '/acasa#contact',
   },
 
   contactMail: {

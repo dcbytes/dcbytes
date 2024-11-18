@@ -13,24 +13,29 @@
     <app-nav-entry
       [mainTitle]="navigation.about.title"
       [href]="navigation.about.href"
+      (click)="toggleDrawer()"
     />
     <app-nav-entry
       [mainTitle]="navigation.services.title"
       [href]="navigation.services.href"
+      (click)="toggleDrawer()"
     />
     <app-nav-entry
       [mainTitle]="navigation.process.title"
       [href]="navigation.process.href"
+      (click)="toggleDrawer()"
     />
     <app-nav-entry
       [mainTitle]="navigation.portfolio.title"
       [href]="navigation.portfolio.href"
+      (click)="toggleDrawer()"
     />
     <app-nav-entry
       [mainTitle]="navigation.pricing.title"
       [href]="navigation.pricing.href"
+      (click)="toggleDrawer()"
     />
-    <a [href]="navigation.contact.href"
+    <a [href]="navigation.contact.href" pageScroll (click)="toggleDrawer()"
       ><button>{{ navigation.contact.title }}</button></a
     >
   </div>

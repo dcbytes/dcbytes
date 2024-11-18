@@ -40,10 +40,12 @@
       ></app-form-error-message>
     </div>
 
-    <button type="submit" [disabled]="!contactForm.valid">Trimite mesaj</button>
+    <button type="submit" [attr.disabled]="!contactForm.valid || formSent">
+      Trimite mesaj
+    </button>
   </form>
 
   <div class="corner-animation">
-    <img src="contact-block.png" alt="Contact">
+    <img src="contact-block.png" alt="Contact" />
   </div>
 </div>

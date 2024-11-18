@@ -33,4 +33,8 @@ export class DrawerComponent {
   drawerOpened$ = this.drawerService.drawerState;
 
   constructor(private readonly drawerService: DrawerService) {}
+
+  toggleDrawer() {
+    this.drawerService.toggleDrawer();
+  }
 }
