@@ -16,16 +16,15 @@ export class HeroComponent {
   lottieOptions: AnimationOptions = {
     path: 'scroll-down.json',
   };
-
   heroLottieOptions: AnimationOptions = {
     path: 'hero.json',
   };
 
   @Input()
-  mainTitle = '';
+  subtitle = '';
 
   @Input()
-  subtitle = '';
+  mainTitle = '';
 
   @Input()
   breadcrumbs: string[] = [];
