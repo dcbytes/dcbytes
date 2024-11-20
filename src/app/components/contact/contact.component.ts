@@ -47,18 +47,6 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  sendContactForm() {
-    this.contactService.sendContactForm(this.contactForm.value).subscribe({
-      next: () => {
-        this.formSent = true;
-        this.toastr.success('Message sent successfully');
-      },
-      error: () => {
-        this.toastr.error('Error sending message');
-      },
-    });
-  }
-
   private getFormData(): any {
     const formData: any = {};
     const formControls = this.contactForm.controls;
