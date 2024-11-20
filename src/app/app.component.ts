@@ -7,7 +7,7 @@ import { LoadingComponent } from './global/loading/loading.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, DrawerComponent, LoadingComponent],
+  imports: [NavbarComponent, RouterOutlet, DrawerComponent, LoadingComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
